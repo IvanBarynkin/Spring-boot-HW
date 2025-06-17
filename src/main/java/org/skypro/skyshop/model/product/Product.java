@@ -38,10 +38,6 @@ public abstract class Product implements Searchable, InputChecks {
     }
 
 
-    public boolean equalsProduct(Product other) {
-        return (this.getName().equals(other.getName()));
-    }
-
     public abstract int getCost();
 
     public boolean isSpecial() {

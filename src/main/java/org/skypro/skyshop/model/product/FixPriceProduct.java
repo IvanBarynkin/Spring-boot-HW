@@ -4,7 +4,7 @@ import java.util.UUID;
 
 public class FixPriceProduct extends Product {
 
-    private final int FIX_COST;
+    private final int fixCost;
 
     public FixPriceProduct(String name, int fixCost, UUID id) {
         super(name,id);
@@ -13,13 +13,11 @@ public class FixPriceProduct extends Product {
         } catch (IllegalArgumentException e) {
             System.out.println(e);
         }
-        this.FIX_COST = fixCost;
+        this.fixCost = fixCost;
     }
 
     @Override
-    public int getCost() {
-        return FIX_COST;
-    }
+    public int getCost() { return fixCost; }
 
     @Override
     public UUID getId() {
@@ -33,6 +31,6 @@ public class FixPriceProduct extends Product {
 
     @Override
     public String toString() {
-        return (name + ": " + FIX_COST);
+        return (name + ": " + fixCost);
     }
 }
