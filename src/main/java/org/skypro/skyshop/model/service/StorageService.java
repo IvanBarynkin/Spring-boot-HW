@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Stream;
 
@@ -27,6 +28,10 @@ public class StorageService {
         fillProductStorage(productStorage);
         fillArticleStorage(articleStorage);
 
+    }
+
+    public Optional<Product> getProductById(UUID id){
+        return Optional.ofNullable(productStorage.get(id));
     }
 
     public Collection<Product> getProducts() {
