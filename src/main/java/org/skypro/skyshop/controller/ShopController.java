@@ -7,7 +7,7 @@ import org.skypro.skyshop.model.searchresult.SearchResult;
 import org.skypro.skyshop.model.service.BasketService;
 import org.skypro.skyshop.model.service.SearchService;
 import org.skypro.skyshop.model.service.StorageService;
-import org.skypro.skyshop.model.userBasket.UserBasket;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
